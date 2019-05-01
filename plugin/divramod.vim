@@ -1,1 +1,1 @@
-command! -nargs=0 DirenvExport call direnv#export()
+command! -nargs=0 DivramodExport call divramod#export()
