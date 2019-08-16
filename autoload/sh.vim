@@ -12,4 +12,5 @@ function! sh#open_test_pair()
     let l:path_to_open = l:path_file . '/tests/' . l:name_file . '.bats'
   endif
   execute 'edit' l:path_to_open
+  write
 endfunction
