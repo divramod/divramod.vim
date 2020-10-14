@@ -7,6 +7,24 @@ function! divramod#fzf_files()
     endtry
 endfunc
 
+function! divramod#fzf_files_vim_home()
+    try
+        silent! :FzfFiles $HOME/.vim
+    catch
+        silent! :call popup_clear()
+        silent! :FzfFiles $HOME/.vim
+    endtry
+endfunc
+
+function! divramod#fzf_files_vim_snippets()
+    try
+        silent! :FzfFiles $HOME/.vim/plugged/vim-snippets/UltiSnips
+    catch
+        silent! :call popup_clear()
+        silent! :FzfFiles $HOME/.vim/plugged/vim-snippets/UltiSnips
+    endtry
+endfunc
+
 function! divramod#fzf_ag()
     try
         silent! :FzfAg
